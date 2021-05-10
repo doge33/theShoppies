@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 
-export default function SearchBar({handleSubmit}){
-
-  const [term, setTerm] = useState('');
+export default function SearchBar({searchTerm, handleSearchTermChange, handleSubmit}){
 
   const onFormSubmit = evt => {
     evt.preventDefault();
-    handleSubmit(term)
+    handleSubmit(searchTerm)
   }
 
   return(
@@ -25,8 +23,8 @@ export default function SearchBar({handleSubmit}){
                   className="prompt" 
                   type="text" 
                   placeholder="Search movies..." 
-                  value={term}
-                  onChange={(evt) => setTerm(evt.target.value)}
+                  value={searchTerm}
+                  onChange={(evt) => handleSearchTermChange(evt.target.value)}
                 />
               </div>
               {/* <div className="results"></div>  */}

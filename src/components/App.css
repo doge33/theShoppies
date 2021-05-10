@@ -1,0 +1,23 @@
+/* custom css for the app */
+
+/* Movie List style */
+.movie-list{
+  text-align: left
+}
+
+.movie-list > label{
+  margin-left: 1em
+}
+
+/* Movie Item style */
+.movie-item{
+  text-align: left;
+  margin: 1.5em
+}
+
+.item-detail {
+  display: inline-block
+}
+.item-detail > span{
+  margin-right: 1em
+}

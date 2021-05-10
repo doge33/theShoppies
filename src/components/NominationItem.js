@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NominateButton from './NominateButton';
+import RemoveButton from './RemoveButton';
 
 export default function MovieItem({movie, listName, onNomination, onRemoval}){
 
@@ -19,9 +19,7 @@ export default function MovieItem({movie, listName, onNomination, onRemoval}){
             <span>{movie.Title} ({movie.Year})</span>
           </div>
           <div className="item-detail">
-           { 
-            <NominateButton movieItem={movie} isNominated={movie.nominated} onButtonClick={onNomination}/>
-            } 
+           <RemoveButton movieItem={movie} onButtonClick={onRemoval}/>
           </div>
         </div>
              
